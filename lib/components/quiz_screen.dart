@@ -21,7 +21,7 @@ class QuizScreen extends StatelessWidget {
           FlatButton(
               onPressed: _controller.nextQuestion,
               child: const Text(
-                "Skip",
+                "Bỏ qua",
                 style: TextStyle(color: Colors.white70),
               )
           ),

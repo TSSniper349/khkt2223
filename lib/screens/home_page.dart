@@ -225,9 +225,9 @@ class HomePage extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
                                       TaskColumn(
-                                        icon: Icons.settings,
+                                        icon: Icons.report,
                                         iconBackgroundColor: LightColors.kGreen,
-                                        title: 'Cài đặt',
+                                        title: 'Kết quả',
                                       ),
                                       const SizedBox(height: 15.0),
                                     ],
