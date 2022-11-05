@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:khkt2223/controllers/question_controller.dart';
@@ -33,6 +34,11 @@ class QuestionCard2 extends StatelessWidget {
                 .textTheme
                 .headline6
                 ?.copyWith(color: Colors.white70),
+          ),
+          const SizedBox(height: kDefaultPadding/2),
+          ElevatedButton(
+            onPressed: () => AudioPlayer().play(AssetSource('sounds/${question.fileName}')),
+            child: const Icon(Icons.play_arrow),
           ),
           const SizedBox(height: kDefaultPadding * 2),
           Row(

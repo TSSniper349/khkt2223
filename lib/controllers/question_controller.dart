@@ -23,6 +23,7 @@ class QuestionController extends GetxController
             id: question['id'],
             question: question['question'],
             options: question['options'],
+            fileName: question['fileName'],
             answer: question['answer_index']),
       )
       .toList();

@@ -1,76 +1,112 @@
 class Question {
   final int id, answer;
-  final String question;
+  final String question,fileName;
   final List<String> options;
 
-  Question({required this.id, required this.question, required this.answer, required this.options});
+  Question({required this.id, required this.question, required this.answer, required this.options, required this.fileName});
 }
 
 const List sample_data = [
   {
-    "id": 1,
+    "id": 0,
     "question": "Hãy chọn bên phải ?",
     "options": ['Trái', 'Phải'],
+    "fileName": "haychonbenphai.mp3",
     "answer_index": 1,
+  },
+  {
+    "id": 1,
+    "question": "Hãy chọn bên trái ?",
+    "options": ['Trái', 'Phải'],
+    "fileName": "haychonbentrai.mp3",
+    "answer_index": 0,
   },
   {
     "id": 2,
-    "question": "Hãy chọn bên trái ?",
-    "options": ['Trái', 'Phải'],
-    "answer_index": 0,
-  },
-  {
-    "id": 3,
     "question": "Hãy chọn bên phải ?",
     "options": ['Trái', 'Phải'],
+    "fileName": "haychonbenphai.mp3",
     "answer_index": 1,
   },
   {
-    "id": 4,
-    "question": "Chọn từ tương ứng với bức hình sau đây:",
+    "id": 3,
+    "question": "Hãy chọn từ tương ứng với bức hình sau đây:",
     "options": ['Con bò', 'Con dò'],
+    "fileName": "cow",
     "answer_index": 0,
   },
   {
+    "id": 4,
+    "question": "Hãy chọn từ tương ứng với bức hình sau đây:",
+    "options": ['Trái dóng', 'Trái bóng'],
+    "fileName": "ball",
+    "answer_index": 1,
+  },
+  {
     "id": 5,
+    "question": "Hãy chọn từ tương ứng với bức hình sau đây:",
+    "options": ['Cái dĩa', 'Cái bĩa'],
+    "fileName": "plate",
+    "answer_index": 0,
+  },
+  {
+    "id": 6,
     "question": "1 + 2 =",
     "options": ['           4','           3','           1','           2'],
     "answer_index": 1,
   },
   {
-    "id": 6,
+    "id": 7,
     "question": "5 - 3 =",
     "options": ['           2','           3','           1','           8'],
     "answer_index": 0,
   },
   {
-    "id": 7,
+    "id": 8,
     "question": "2 + 7 =",
     "options": ['           8','           5','           10','           9'],
     "answer_index": 3,
   },
   {
-    "id": 8,
-    "question": "Con có gặp khó khăn trong việc nhớ thời khóa biểu",
-    "options": ['Có','Không'],
-    "answer_index": 1,
-  },
-  {
     "id": 9,
-    "question": "Con có thích đọc sách không ?",
+    "question": "Con có gặp khó khăn trong việc nhớ thời gian biểu",
     "options": ['Có','Không'],
-    "answer_index": 0,
+    "fileName": "concogapkhokhankhighinhothoigianbieu.mp3",
+    "answer_index": 1,
   },
   {
     "id": 10,
-    "question": "Lúc đọc sách thì con không thích đọc to ra",
+    "question": "Con có thích đọc sách nếu nó quá dài",
     "options": ['Có','Không'],
-    "answer_index": 1,
+    "fileName": "concothichdocsachneunoquadai.mp3",
+    "answer_index": 0,
   },
   {
     "id": 11,
-    "question": "Con có gặp khó khăn khi làm toán mà không có giấy hay đếm không?",
+    "question": "Con tiếp thu thông tin dễ hơn khi được nghe hơn là đọc",
     "options": ['Có','Không'],
+    "fileName": "contiepthuthongtindehonkhiduocnghehonladoc.mp3",
+    "answer_index": 1,
+  },
+  {
+    "id": 12,
+    "question": "Lúc đọc sách thì con không thích đọc to ra",
+    "options": ['Có','Không'],
+    "fileName": "lucdocsachthiconkhonthichdoctora.mp3",
+    "answer_index": 1,
+  },
+  {
+    "id": 13,
+    "question": "Con có hay quên nếu thông tin quá dài",
+    "options": ['Có','Không'],
+    "fileName": "concohayquenneuthongtinquadai.mp3",
+    "answer_index": 1,
+  },
+  {
+    "id": 14,
+    "question": "Con có gặp khó khăn khi làm toán mà không có giấy hay đếm",
+    "options": ['Có','Không'],
+    "fileName": "concogapkhokhankhilamtoanmakhongdunggiayhaydem.mp3",
     "answer_index": 1,
   },
 ];

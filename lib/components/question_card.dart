@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:khkt2223/controllers/question_controller.dart';
@@ -6,8 +7,8 @@ import 'package:khkt2223/models/Questions.dart';
 import '../constants.dart';
 import 'option.dart';
 
-class QuestionCard extends StatelessWidget {
-  const QuestionCard({
+class QuestionCardNormal extends StatelessWidget {
+  const QuestionCardNormal({
     Key? key,
     // it means we have to pass this
     required this.question,
@@ -34,6 +35,10 @@ class QuestionCard extends StatelessWidget {
                 .headline6
                 ?.copyWith(color: Colors.white70),
           ),
+          ElevatedButton(
+            onPressed: () => AudioPlayer().play(AssetSource('sounds/${question.fileName}')),
+            child: const Icon(Icons.play_arrow),
+          ),
           SizedBox(height: kDefaultPadding / 2),
           ...List.generate(
             question.options.length,
@@ -43,6 +48,7 @@ class QuestionCard extends StatelessWidget {
               press: () => _controller.checkAns(question, index)
             ),
           ),
+
         ],
       ),
     );

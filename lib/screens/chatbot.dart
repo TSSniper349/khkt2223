@@ -66,7 +66,7 @@ class _HomeScreen extends State<HomeScreen>{
                     controller: queryController,
                     textInputAction: TextInputAction.send,
                     onSubmitted: (msg){
-                      this.getResponse();
+                      //this.getResponse();
                     },
                   ),
                 ),
@@ -78,28 +78,28 @@ class _HomeScreen extends State<HomeScreen>{
     );
   }
 
-  void getResponse(){
-    if (queryController.text.length > 0){
-      this.insertSingleItem(queryController.text);
-      var client = getClient();
-      try{
-        client.post(
-          BOT_URL,
-          body: {"response": queryController.text},
-
-        )..then((response){
-          print(response.body);
-          Map<String, dynamic> data = jsonDecode(response.body);
-          insertSingleItem(data['response'] + "<bot>");
-          // print(data['response']);
-        });
-      }
-      finally{
-        client.close();
-        queryController.clear();
-      }
-    }
-  }
+  // void getResponse(){
+  //   if (queryController.text.length > 0){
+  //     this.insertSingleItem(queryController.text);
+  //     var client = getClient();
+  //     try{
+  //       client.post(
+  //         BOT_URL,
+  //         body: {"response": queryController.text},
+  //
+  //       )..then((response){
+  //         print(response.body);
+  //         Map<String, dynamic> data = jsonDecode(response.body);
+  //         insertSingleItem(data['response'] + "<bot>");
+  //         // print(data['response']);
+  //       });
+  //     }
+  //     finally{
+  //       client.close();
+  //       queryController.clear();
+  //     }
+  //   }
+  // }
 
   void insertSingleItem(String message){
     _data.add(message);

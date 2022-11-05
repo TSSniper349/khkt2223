@@ -6,9 +6,8 @@ import 'package:khkt2223/models/Questions.dart';
 import '../constants.dart';
 import 'option.dart';
 
-class QuestionCard3 extends StatelessWidget {
-
-  const QuestionCard3({
+class QuestionCardMath extends StatelessWidget {
+  const QuestionCardMath({
     Key? key,
     // it means we have to pass this
     required this.question,
@@ -20,8 +19,8 @@ class QuestionCard3 extends StatelessWidget {
   Widget build(BuildContext context) {
     QuestionController _controller = Get.put(QuestionController());
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-      padding: const EdgeInsets.all(kDefaultPadding),
+      margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
         color: secondaryColor,
         borderRadius: BorderRadius.circular(25),
@@ -32,25 +31,19 @@ class QuestionCard3 extends StatelessWidget {
             question.question,
             style: Theme.of(context)
                 .textTheme
-                .headline6!
-                .copyWith(color: Colors.white70),
+                .headline6
+                ?.copyWith(color: Colors.white70),
           ),
-          Image.asset(
-              'assets/pics/cow.png',
-              width: 300,
-              height: 300,
-              fit: BoxFit.cover,
-          ),
-          const SizedBox(height: kDefaultPadding / 2),
-
-            ...List.generate(
-              question.options.length,
-                  (index) => Option(
+          SizedBox(height: kDefaultPadding / 2),
+          ...List.generate(
+            question.options.length,
+                (index) => Option(
                 index: index,
                 text: question.options[index],
-                press: () => _controller.checkAns(question, index),
-              ),
+                press: () => _controller.checkAns(question, index)
             ),
+          ),
+
         ],
       ),
     );
