@@ -42,7 +42,7 @@ List demoMyFiles = [
     percentage: 40,
   ),
   CloudStorageInfo(
-    title: "Ghi nhớ",
+    title: "Khác",
     numOfFiles: 4,
     svgSrc: "assets/icons/drop_box.svg",
     totalStorage: "5 câu",

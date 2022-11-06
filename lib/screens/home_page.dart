@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:khkt2223/components/quiz_screen.dart';
+import 'package:khkt2223/course_screen.dart';
 import 'package:khkt2223/screens/tracking_page.dart';
 import 'package:khkt2223/theme/colors/light_colors.dart';
 import 'package:khkt2223/widgets/task_column.dart';
@@ -11,7 +12,7 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import '../components/score_screen.dart';
 import '../constants.dart';
-import '../main_screen.dart';
+import 'main_screen.dart';
 
 class HomePage extends StatelessWidget {
   Text subheading(String title) {
@@ -167,7 +168,7 @@ class HomePage extends StatelessWidget {
                                   Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => FilterNetworkListPage()),
+                                      builder: (context) => CourseScreen()),
                                   );
                                 },
                                   child: Row(

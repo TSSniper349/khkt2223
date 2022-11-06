@@ -1,5 +1,6 @@
-import 'package:khkt2223/my_fields.dart';
+import 'package:khkt2223/screens/my_fields.dart';
 import 'package:flutter/material.dart';
+import 'package:khkt2223/screens/storage_details.dart';
 import 'constants.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -22,6 +23,7 @@ class DashboardScreen extends StatelessWidget {
                     children: const [
                       MyFiles(),
                       SizedBox(height: kDefaultPadding),
+                      StorageDetails(),
                       //RecentFiles(),
                       // if (Responsive.isMobile(context))
                       //   SizedBox(height: defaultPadding),

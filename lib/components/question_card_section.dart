@@ -32,8 +32,8 @@ class QuestionCardSection extends StatelessWidget {
             question.question,
             style: Theme.of(context)
                 .textTheme
-                .headline5
-                ?.copyWith(color: Colors.white70),
+                .headline5!
+                .copyWith(color: Colors.white70),
           ),
           SizedBox(height: kDefaultPadding * 8),
           ...List.generate(

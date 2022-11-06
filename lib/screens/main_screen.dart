@@ -2,7 +2,7 @@ import 'package:khkt2223/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:khkt2223/theme/colors/light_colors.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 class MainScreen extends StatelessWidget {
   @override

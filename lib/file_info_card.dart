@@ -19,7 +19,7 @@ class FileInfoCard extends StatelessWidget {
       padding: EdgeInsets.all(20),
       decoration: const BoxDecoration(
         color: secondaryColor,
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: BorderRadius.all(Radius.circular(14)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

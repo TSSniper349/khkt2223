@@ -4,7 +4,7 @@ import 'package:khkt2223/file_info_card.dart';
 import 'package:khkt2223/models/MyFiles.dart';
 import 'package:khkt2223/responsive.dart';
 import 'package:flutter/material.dart';
-import 'constants.dart';
+import '../constants.dart';
 
 class MyFiles extends StatelessWidget {
   const MyFiles({
@@ -24,18 +24,6 @@ class MyFiles extends StatelessWidget {
               "Đánh giá sơ bộ",
               style: Theme.of(context).textTheme.subtitle1!.copyWith(color: Colors.white),
             ),
-            // ElevatedButton.icon(
-            //   style: TextButton.styleFrom(
-            //     padding: EdgeInsets.symmetric(
-            //       horizontal: kDefaultPadding * 1.5,
-            //       vertical:
-            //           kDefaultPadding / (Responsive.isMobile(context) ? 2 : 1),
-            //     ),
-            //   ),
-            //   onPressed: () {},
-            //   icon: Icon(Icons.add),
-            //   label: Text("Add New"),
-            // ),
           ],
         ),
         SizedBox(height: kDefaultPadding),
@@ -49,20 +37,13 @@ class MyFiles extends StatelessWidget {
             childAspectRatio: _size.width < 1400 ? 1.1 : 1.4,
           ),
         ),
-        SizedBox(height: kDefaultPadding*6),
+        SizedBox(height: kDefaultPadding*2),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Tỉ lệ chính xác",
-              style: Theme.of(context).textTheme.headline4!.copyWith(color: kSecondaryColor),
-            ),
-            SizedBox(width: kDefaultPadding*5),
-            Text(
-              "${(_qnController.numOfCorrectAns/_qnController.questions.length*100).round()}%",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline5!
-                  .copyWith(color: kSecondaryColor),
+              "Kết quả chẩn đoán",
+              style: Theme.of(context).textTheme.subtitle1!.copyWith(color: Colors.white),
             ),
           ],
         ),
