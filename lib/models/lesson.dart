@@ -3,12 +3,14 @@ class Lesson {
   String duration;
   bool isPlaying;
   bool isCompleted;
+  String fileName;
 
   Lesson({
     required this.duration,
     required this.isCompleted,
     required this.isPlaying,
     required this.name,
+    required this.fileName
   });
 }
 
@@ -17,42 +19,49 @@ List<Lesson> lessonList = [
     duration: '5 phút',
     isCompleted: true,
     isPlaying: true,
-    name: "C",
+    name: "C /k/",
+    fileName: "A.mp3",
   ),
   Lesson(
     duration: '5 phút',
     isCompleted: true,
     isPlaying: false,
     name: "A /a/",
+    fileName: "A.mp3",
   ),
   Lesson(
     duration: '5 phút',
     isCompleted: true,
     isPlaying: false,
-    name: "Ca",
+    name: "Ca /ka/",
+    fileName: "Ca.mp3",
   ),
   Lesson(
     duration: '5 phút',
     isCompleted: false,
     isPlaying: false,
     name: "Âm huyền",
+    fileName: "Huyen.mp3",
   ),
   Lesson(
     duration: '5 phút',
     isCompleted: false,
     isPlaying: false,
     name: "Cà",
+    fileName: "Cà.mp3",
   ),
   Lesson(
     duration: '5 phút',
     isCompleted: false,
     isPlaying: false,
     name: "Âm sắc",
+    fileName: "sac.mp3",
   ),
   Lesson(
     duration: '5 phút',
     isCompleted: false,
     isPlaying: false,
     name: "Cá",
+    fileName: "Cá.mp3",
   ),
 ];

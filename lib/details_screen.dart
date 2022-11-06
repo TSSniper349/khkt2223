@@ -45,14 +45,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     children: [
                       Align(
                         child: Text(
-                          "Bài 1: Cà & Cá",
-                          style: Theme.of(context).textTheme.displaySmall!.copyWith(color: Colors.white70),
+                          "Bài 1",
+                          style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white70),
                         ),
                       ),
                       Positioned(
                         left: 0,
                         child: CustomIconButton(
-                          child: const Icon(Icons.arrow_back),
+                          child: const Icon(Icons.arrow_back,color: Colors.white70,),
                           height: 35,
                           width: 35,
                           onTap: () => Navigator.pop(context),
@@ -65,9 +65,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   height: 25,
                 ),
                 //const CustomVideoPlayer(),
-                const SizedBox(
-                  height: 15,
-                ),
                 const Text(
                   "Bài 1",
                   style: TextStyle(
@@ -91,28 +88,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   height: 3,
                 ),
                 Row(
-                  children: [
-                    Image.asset(
-                      icFeaturedOutlined,
-                      height: 20,
-                    ),
-                    const Text(
-                      " 4.8",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    const Icon(
+                  children: const [
+                    Icon(
                       Icons.timer,
                       color: Colors.grey,
                     ),
-                    const Text(
-                      " 72 Tiếng",
+                    Text(
+                      " 35 phút",
                       style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.w500,
@@ -180,7 +162,7 @@ class Description extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(top: 20.0),
       child: Text(
-        "Build Flutter iOS and Android Apps with a Single Codebase: Learn Google's Flutter Mobile Development Framework & Dart",
+        "Bao gồm một số bài tập hỗ trợ luyện nghe và phát âm, giúp cho con có thể dễ dàng học từ mới một cách chính xác và tốt hơn. Bài học này được thiết kế để phù hợp với khả năng của con.",
         style: TextStyle(color: Colors.white70),
       ),
     );
@@ -254,7 +236,7 @@ class CustomIconButton extends StatelessWidget {
     required this.child,
     required this.height,
     required this.width,
-    this.color = Colors.white,
+    this.color = Colors.transparent,
     required this.onTap,
   }) : super(key: key);
 
@@ -271,13 +253,6 @@ class CustomIconButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(.1),
-            blurRadius: 2.0,
-            spreadRadius: .05,
-          ), //BoxShadow
-        ],
       ),
     );
   }

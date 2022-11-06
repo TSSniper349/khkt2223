@@ -39,7 +39,7 @@ class _CourseScreenState extends State<CourseScreen> {
                       Positioned(
                         left: 0,
                         child: CustomIconButton(
-                          child: const Icon(Icons.arrow_back),
+                          child: const Icon(Icons.arrow_back,color: Colors.white70,),
                           height: 35,
                           width: 35,
                           onTap: () => Navigator.pop(context),
@@ -95,20 +95,14 @@ class CourseContainer extends StatelessWidget {
                   ))),
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(14),
           color: secondaryColor,
         ),
         padding: const EdgeInsets.all(10),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                course.thumbnail,
-                height: 60,
-              ),
-            ),
+            Icon(Icons.bookmark,color: Colors.yellowAccent.withOpacity(.6),size: 30,),
             const SizedBox(
               width: 10,
             ),
@@ -118,11 +112,11 @@ class CourseContainer extends StatelessWidget {
                 children: [
                   Text(
                     course.name,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white70),
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white70),
                   ),
                   Text(
                     "Được đăng bởi ${course.author}",
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white70),
+                    style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white54),
                   ),
                   const SizedBox(
                     height: 5,

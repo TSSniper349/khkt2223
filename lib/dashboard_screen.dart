@@ -18,7 +18,7 @@ class DashboardScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  flex: 5,
+                  flex: 3,
                   child: Column(
                     children: const [
                       MyFiles(),

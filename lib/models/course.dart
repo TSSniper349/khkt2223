@@ -16,13 +16,13 @@ List<Course> courses = [
   Course(
     author: "Bs. Nguyễn Văn A",
     completedPercentage: .80,
-    name: "Bài 1: Cà",
+    name: "Bài 1",
     thumbnail: "assets/icons/flutter.jpg",
   ),
   Course(
     author: "Bs. Nguyễn Văn A",
     completedPercentage: .60,
-    name: "Bài 2:",
+    name: "Bài 2",
     thumbnail: "assets/icons/react.jpg",
   ),
   Course(
