@@ -115,7 +115,7 @@ class CourseContainer extends StatelessWidget {
                     style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white70),
                   ),
                   Text(
-                    "Được đăng bởi ${course.author}",
+                    "Đăng bởi ${course.author}",
                     style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white54),
                   ),
                   const SizedBox(

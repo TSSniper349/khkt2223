@@ -9,11 +9,10 @@ class DashboardScreen extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         primary: false,
-        padding: const EdgeInsets.all(kDefaultPadding),
+        padding: const EdgeInsets.all(kDefaultPadding * .8),
         child: Column(
           children: [
             //Header(),
-            const SizedBox(height: kDefaultPadding),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -22,7 +21,7 @@ class DashboardScreen extends StatelessWidget {
                   child: Column(
                     children: const [
                       MyFiles(),
-                      SizedBox(height: kDefaultPadding),
+                      SizedBox(height: kDefaultPadding * .8),
                       StorageDetails(),
                       //RecentFiles(),
                       // if (Responsive.isMobile(context))

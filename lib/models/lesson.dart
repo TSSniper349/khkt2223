@@ -40,22 +40,8 @@ List<Lesson> lessonList = [
     duration: '5 phút',
     isCompleted: false,
     isPlaying: false,
-    name: "Âm huyền",
-    fileName: "Huyen.mp3",
-  ),
-  Lesson(
-    duration: '5 phút',
-    isCompleted: false,
-    isPlaying: false,
     name: "Cà",
     fileName: "Cà.mp3",
-  ),
-  Lesson(
-    duration: '5 phút',
-    isCompleted: false,
-    isPlaying: false,
-    name: "Âm sắc",
-    fileName: "sac.mp3",
   ),
   Lesson(
     duration: '5 phút',

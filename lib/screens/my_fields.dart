@@ -21,7 +21,7 @@ class MyFiles extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Đánh giá sơ bộ",
+              "Tổng quan",
               style: Theme.of(context).textTheme.subtitle1!.copyWith(color: Colors.white),
             ),
           ],
@@ -37,7 +37,7 @@ class MyFiles extends StatelessWidget {
             childAspectRatio: _size.width < 1400 ? 1.1 : 1.4,
           ),
         ),
-        SizedBox(height: kDefaultPadding*2),
+        SizedBox(height: kDefaultPadding),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

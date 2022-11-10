@@ -21,14 +21,14 @@ class Option extends StatelessWidget {
         init: QuestionController(),
         builder: (qnController) {
           Color getTheRightColor() {
-            if (qnController.isAnswered) {
-              if (index == qnController.correctAns) {
-                return kGreenColor;
-              } else if (index == qnController.selectedAns &&
-                  qnController.selectedAns != qnController.correctAns) {
-                return kRedColor;
-              }
-            }
+            // if (qnController.isAnswered) {
+            //   if (index == qnController.correctAns) {
+            //     return kGreenColor;
+            //   } else if (index == qnController.selectedAns &&
+            //       qnController.selectedAns != qnController.correctAns) {
+            //     return kRedColor;
+            //   }
+            // }
             return kGrayColor;
           }
 

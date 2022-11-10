@@ -18,7 +18,7 @@ class CloudStorageInfo {
 
 List demoMyFiles = [
   CloudStorageInfo(
-    title: "Phát âm",
+    title: "Ghi nhớ",
     numOfFiles: 3,
     svgSrc: "assets/icons/Documents.svg",
     totalStorage: "5 câu",
@@ -27,11 +27,11 @@ List demoMyFiles = [
   ),
   CloudStorageInfo(
     title: "Toán",
-    numOfFiles: 4,
+    numOfFiles: 3,
     svgSrc: "assets/icons/google_drive.svg",
-    totalStorage: "5 câu",
+    totalStorage: "3 câu",
     color: Color(0xFFFFA113),
-    percentage: 80,
+    percentage: 100,
   ),
   CloudStorageInfo(
     title: "Đọc",
@@ -43,10 +43,10 @@ List demoMyFiles = [
   ),
   CloudStorageInfo(
     title: "Khác",
-    numOfFiles: 4,
+    numOfFiles: 7,
     svgSrc: "assets/icons/drop_box.svg",
-    totalStorage: "5 câu",
+    totalStorage: "10 câu",
     color: Color(0xFF007EE5),
-    percentage: 80,
+    percentage: 70,
   ),
 ];

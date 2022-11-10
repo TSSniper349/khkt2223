@@ -77,7 +77,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   height: 3,
                 ),
                 const Text(
-                  "Đăng bởi Bs.Nguyễn Văn A",
+                  "Đăng bởi Gv.Trần Thị T",
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
@@ -180,7 +180,7 @@ class CustomTabView extends StatefulWidget {
 }
 
 class _CustomTabViewState extends State<CustomTabView> {
-  final List<String> _tags = ["Danh mục (7)", "Mô tả"];
+  final List<String> _tags = ["Danh mục (5)", "Mô tả"];
 
   Widget _buildTags(int index) {
     return GestureDetector(

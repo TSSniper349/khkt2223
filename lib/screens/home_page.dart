@@ -157,7 +157,7 @@ class HomePage extends StatelessWidget {
                                       TaskColumn(
                                         icon: Icons.chat,
                                         iconBackgroundColor: LightColors.kRed,
-                                        title: 'Kết nối bác sĩ',
+                                        title: 'Tư vấn',
                                       ),
                                     ],
                                   ),

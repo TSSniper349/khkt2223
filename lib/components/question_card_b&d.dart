@@ -44,8 +44,8 @@ class QuestionCard3 extends StatelessWidget {
           const SizedBox(height: kDefaultPadding / 2),
           Image.asset(
               'assets/pics/${question.fileName}.png',
-              width: 300,
-              height: 300,
+              width: 200,
+              height: 200,
               fit: BoxFit.cover,
           ),
           const SizedBox(height: kDefaultPadding / 2),
