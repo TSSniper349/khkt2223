@@ -52,19 +52,19 @@ const List sample_data = [
   {
     "id": 6,
     "question": "1 + 2 =",
-    "options": ['           4','           3','           1','           2'],
+    "options": ['           6','           3','           8','           2'],
     "answer_index": 1,
   },
   {
     "id": 7,
     "question": "5 - 3 =",
-    "options": ['           2','           3','           1','           8'],
+    "options": ['           2','           5','           3','           7'],
     "answer_index": 0,
   },
   {
     "id": 8,
     "question": "2 + 7 =",
-    "options": ['           8','           5','           10','           9'],
+    "options": ['           3','           2','           6','           9'],
     "answer_index": 3,
   },
   {

@@ -20,7 +20,7 @@ List<Lesson> lessonList = [
     isCompleted: true,
     isPlaying: true,
     name: "C /k/",
-    fileName: "A.mp3",
+    fileName: "C.mp3",
   ),
   Lesson(
     duration: '5 phút',
@@ -35,13 +35,6 @@ List<Lesson> lessonList = [
     isPlaying: false,
     name: "Ca /ka/",
     fileName: "Ca.mp3",
-  ),
-  Lesson(
-    duration: '5 phút',
-    isCompleted: false,
-    isPlaying: false,
-    name: "Cà",
-    fileName: "Cà.mp3",
   ),
   Lesson(
     duration: '5 phút',
