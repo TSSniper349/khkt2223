@@ -5,13 +5,41 @@ import 'package:khkt2223/models/MyFiles.dart';
 import 'package:khkt2223/responsive.dart';
 import 'package:flutter/material.dart';
 import '../constants.dart';
+import 'package:socket_io_client/socket_io_client.dart' as IO;
+import 'package:socket_io_client/socket_io_client.dart';
 
-class MyFiles extends StatelessWidget {
-  const MyFiles({
-    Key? key,
-  }) : super(key: key);
+class MyFiles extends StatefulWidget {
+  const MyFiles({Key? key}) : super(key: key);
 
   @override
+  _MyFilesState createState() => _MyFilesState();
+}
+
+class _MyFilesState extends State<MyFiles> {
+  late Socket socket;
+
+  @override
+
+  void initState(){
+    super.initState();
+    debugPrint("initState() called");
+    connectAndListen();
+  }
+
+  void connectAndListen(){
+    IO.Socket socket = IO.io('https://nodejs-khkt20222023.herokuapp.com/',
+        IO.OptionBuilder()
+            .setTransports(['websocket']).build());
+    // debugPrint('connect');
+    QuestionController _qnController = Get.put(QuestionController());
+    int res = (_qnController.numOfCorrectAns/_qnController.questions.length*100).round();
+    socket.onConnect((_) {
+      debugPrint('connect');
+      socket.emit('res_ans', res);
+    });
+    // socket.emit('res_ans', res);
+    socket.onDisconnect((_) => debugPrint('disconnect'));
+  }
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
     QuestionController _qnController = Get.put(QuestionController());

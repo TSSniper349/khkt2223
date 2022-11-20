@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:socket_io_client/socket_io_client.dart' as IO;
+import 'package:socket_io_client/socket_io_client.dart';
 
 import '../constants.dart';
 class HomeScreen extends StatefulWidget{
@@ -13,11 +15,44 @@ class HomeScreen extends StatefulWidget{
 class _HomeScreen extends State<HomeScreen>{
   final GlobalKey<AnimatedListState> _listkey = GlobalKey();
   List<String> _data = [];
-  static const String BOT_URL = "http://192.168.0.10:5000/get";
+  // static const String BOT_URL = "http://192.168.0.89:3000/get";
   TextEditingController queryController = TextEditingController();
 
+  late Socket socket;
+
   @override
+
+  void initState(){
+    super.initState();
+    debugPrint("initState() called");
+    socket = IO.io('https://nodejs-khkt20222023.herokuapp.com/',
+        IO.OptionBuilder()
+            .setTransports(['websocket']).build());
+    connect_();
+  }
+
+  void connect_(){
+    // debugPrint('connect');
+    String res = "hi";
+    socket.connect();
+    socket.onConnect((_) {
+      debugPrint('connect');
+      // socket.emit('fromClient', res);
+
+    });
+    socket.on("fromServer", (data) =>{
+      debugPrint(data),
+      insertSingleItem(data + "<bot>")
+    });
+    socket.onDisconnect((_) => debugPrint('disconnect'));
+  }
+
   Widget build(BuildContext context){
+    // socket.on("fromServer", (data) =>{
+    //   debugPrint(data),
+    //   insertSingleItem(data + "<bot>")
+    // });
+    // debugPrint("12");
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: secondaryColor,
@@ -33,9 +68,9 @@ class _HomeScreen extends State<HomeScreen>{
         children: <Widget>[
           SingleChildScrollView(
 
-              child: Container(
-                height: 650,
-                child: AnimatedList(
+            child: Container(
+              height: 785,
+              child: AnimatedList(
                 key: _listkey,
                 initialItemCount: _data.length,
                 itemBuilder: (BuildContext context, int index, Animation<double> animation){
@@ -66,7 +101,7 @@ class _HomeScreen extends State<HomeScreen>{
                     controller: queryController,
                     textInputAction: TextInputAction.send,
                     onSubmitted: (msg){
-                      //this.getResponse();
+                      this.getResponse();
                     },
                   ),
                 ),
@@ -78,28 +113,35 @@ class _HomeScreen extends State<HomeScreen>{
     );
   }
 
-  // void getResponse(){
-  //   if (queryController.text.length > 0){
-  //     this.insertSingleItem(queryController.text);
-  //     var client = getClient();
-  //     try{
-  //       client.post(
-  //         BOT_URL,
-  //         body: {"response": queryController.text},
-  //
-  //       )..then((response){
-  //         print(response.body);
-  //         Map<String, dynamic> data = jsonDecode(response.body);
-  //         insertSingleItem(data['response'] + "<bot>");
-  //         // print(data['response']);
-  //       });
-  //     }
-  //     finally{
-  //       client.close();
-  //       queryController.clear();
-  //     }
-  //   }
-  // }
+  void getResponse(){
+    if (queryController.text.length > 0){
+      this.insertSingleItem(queryController.text);
+      var client = getClient();
+      // socket.onConnect((_) {
+      //   debugPrint('connect');
+      //   socket.emit('fromClient', queryController.text);
+      // });
+      socket.emit('fromClient', queryController.text);
+      // insertSingleItem(queryController.text + "<bot>");
+      queryController.clear();
+      // try{
+      //   client.post(
+      //     BOT_URL,
+      //     body: {"response": queryController.text},
+      //
+      //   )..then((response){
+      //     print(response.body);
+      //     Map<String, dynamic> data = jsonDecode(response.body);
+      //     insertSingleItem(data['response'] + "<bot>");
+      //     // print(data['response']);
+      //   });
+      // }
+      // finally{
+      //   client.close();
+      //   queryController.clear();
+      // }
+    }
+  }
 
   void insertSingleItem(String message){
     _data.add(message);
@@ -135,77 +177,4 @@ Widget buildItem(String item, Animation<double> animation, int index, BuildConte
     ),
     sizeFactor: animation,
   );
-  // Future<List<Plant>> _getList(){
-  //   return Future.value(BooksApi.getPlants(t3));
-  // }
-  // // final find = BooksApi.getPlants(t3);
-  // // Future<List<Plant>> list_plant = find;
-  // // print(list_plant);
-  // Future<List<Plant>> find = _getList();
-  // List<Plant> list_plant = await find;
-  // if (item.contains(t1) == true){
-  //   return SizeTransition(
-  //     child: Padding(
-  //       padding: EdgeInsets.only(top: 10, right: 10, left: 10),
-  //       child: Container(
-  //         alignment: mine ? Alignment.topLeft : Alignment.topRight,
-  //         child: GestureDetector(
-  //           onTap: () {
-  //             Navigator.push(
-  //               context,
-  //               MaterialPageRoute(
-  //                   builder: (context) => HomeScreen()),
-  //             );
-  //           },
-  //         )
-  //       ),
-  //     ),
-  //     sizeFactor: animation,
-  //   );
-  // }
-  // else if (item.contains(t2) == true){
-  //   return SizeTransition(
-  //     child: Padding(
-  //       padding: EdgeInsets.only(top: 10, right: 10, left: 10),
-  //       child: Container(
-  //         alignment: mine ? Alignment.topLeft : Alignment.topRight,
-  //         child: Bubble(
-  //           child: Text(
-  //             item.replaceAll(("<bot>"), ""),
-  //             style: TextStyle(
-  //               fontSize: 30,
-  //               color: mine ? Colors.white : Colors.black,
-  //             ),
-  //           ),
-  //           color: mine ? Colors.blue : Colors.grey,
-  //           padding: BubbleEdges.all(10),
-  //         ),
-  //       ),
-  //     ),
-  //     sizeFactor: animation,
-  //   );
-  // }
-  // else {
-  //   return SizeTransition(
-  //     child: Padding(
-  //       padding: EdgeInsets.only(top: 10, right: 10, left: 10),
-  //       child: Container(
-  //         alignment: mine ? Alignment.topLeft : Alignment.topRight,
-  //         child: Bubble(
-  //           child: Text(
-  //             item.replaceAll(("<bot>"), ""),
-  //             style: TextStyle(
-  //               fontSize: 30,
-  //               color: mine ? Colors.white : Colors.black,
-  //             ),
-  //           ),
-  //           color: mine ? Colors.blue : Colors.grey,
-  //           padding: BubbleEdges.all(10),
-  //         ),
-  //       ),
-  //     ),
-  //     sizeFactor: animation,
-  //   );
-  // };
-
 }

@@ -38,7 +38,7 @@ List<Lesson> lessonList = [
   ),
   Lesson(
     duration: '5 phút',
-    isCompleted: false,
+    isCompleted: true,
     isPlaying: false,
     name: "Cá",
     fileName: "Cá.mp3",
