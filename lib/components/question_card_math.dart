@@ -22,7 +22,7 @@ class QuestionCardMath extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: kColor.withOpacity(.3),
         borderRadius: BorderRadius.circular(25),
       ),
       child: Column(
@@ -31,7 +31,7 @@ class QuestionCardMath extends StatelessWidget {
             question.question,
             style: Theme.of(context)
                 .textTheme
-                .headline6
+                .headline5
                 ?.copyWith(color: Colors.white70),
           ),
           SizedBox(height: kDefaultPadding / 2),

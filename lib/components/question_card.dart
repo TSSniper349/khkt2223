@@ -23,7 +23,7 @@ class QuestionCardNormal extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: kColor.withOpacity(.3),
         borderRadius: BorderRadius.circular(25),
       ),
       child: Column(
@@ -32,7 +32,7 @@ class QuestionCardNormal extends StatelessWidget {
             question.question,
             style: Theme.of(context)
                 .textTheme
-                .headline6
+                .headline5
                 ?.copyWith(color: Colors.white70),
           ),
           ElevatedButton(

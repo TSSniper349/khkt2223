@@ -1,8 +1,11 @@
+import 'package:get/get.dart';
 import 'package:khkt2223/models/MyFiles.dart';
 import 'package:flutter/material.dart';
 import 'package:khkt2223/screens/info_components/color.dart';
 import 'package:khkt2223/theme/colors/light_colors.dart';
+import 'package:khkt2223/controllers/question_controller.dart';
 
+import 'components/option.dart';
 import 'constants.dart';
 
 class FileInfoCard extends StatelessWidget {
@@ -15,10 +18,11 @@ class FileInfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    QuestionController _qnController = Get.put(QuestionController());
     return Container(
       padding: EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-        color: secondaryColor,
+      decoration: BoxDecoration(
+        color: kColor.withOpacity(.3),
         borderRadius: BorderRadius.all(Radius.circular(14)),
       ),
       child: Column(
@@ -58,6 +62,7 @@ class FileInfoCard extends StatelessWidget {
             children: [
               Text(
                 "${info.numOfFiles} câu /",
+                //"${_qnController.gg} câu /",
                 style: Theme.of(context)
                     .textTheme
                     .headline6!

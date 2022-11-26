@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
   static CircleAvatar calendarIcon() {
     return const CircleAvatar(
       radius: 25.0,
-      backgroundColor: LightColors.kLavender,
+      backgroundColor: bgColor,
       child: Icon(
         Icons.chat_bubble,
         size: 20.0,
@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: kSecondaryColor,
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -59,9 +59,9 @@ class HomePage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const <Widget>[
                         Icon(Icons.menu,
-                            color: LightColors.kDarkBlue, size: 30.0),
+                            color: Colors.white70, size: 30.0),
                         Icon(Icons.search,
-                            color: LightColors.kDarkBlue, size: 25.0),
+                            color: Colors.white70, size: 30.0),
                       ],
                     ),
                     Padding(
@@ -95,8 +95,8 @@ class HomePage extends StatelessWidget {
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
                                   fontSize: 27.0,
-                                  color: Colors.white60,
-                                  fontWeight: FontWeight.w300,
+                                  color: Colors.white70,
+                                  fontWeight: FontWeight.w900,
                                 ),
                               ),
                               Text(
@@ -104,8 +104,8 @@ class HomePage extends StatelessWidget {
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.white54,
-                                  fontWeight: FontWeight.w100,
+                                  color: Colors.white70,
+                                  fontWeight: FontWeight.w400,
                                 ),
                               ),
                             ],
@@ -132,8 +132,8 @@ class HomePage extends StatelessWidget {
                             textAlign: TextAlign.start,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline5!
-                                .copyWith(color: Colors.white),
+                                .headlineSmall!
+                                .copyWith(color: Colors.white70,fontWeight: FontWeight.w600, fontFamily: 'Poppins-Bold'),
                           ),
                           const SizedBox(height: 15.0),
                           Container(
@@ -177,7 +177,7 @@ class HomePage extends StatelessWidget {
                                       TaskColumn(
                                         icon: Icons.search,
                                         iconBackgroundColor: LightColors.kDarkYellow,
-                                        title: 'Bài tập',
+                                        title: "Bài tập",
                                       ),
                                       const SizedBox(height: 15.0),
                                     ],
@@ -253,8 +253,8 @@ class HomePage extends StatelessWidget {
                             textAlign: TextAlign.start,
                             style: Theme.of(context)
                                 .textTheme
-                                .headline5!
-                                .copyWith(color: Colors.white),
+                                .headlineSmall!
+                                .copyWith(color: Colors.white70,fontWeight: FontWeight.w600, fontFamily: 'Poppins-Bold'),
                           ),
                           const SizedBox(height: 5.0),
                           GestureDetector(
@@ -268,14 +268,14 @@ class HomePage extends StatelessWidget {
                            child: Row(
                             children: <Widget>[
                               ActiveProjectsCard(
-                                    cardColor: kSecondaryColor.withOpacity(0.25),
+                                    cardColor: kColor.withOpacity(0.3),
                                     loadingPercent: 0.25,
                                     title: 'Bài 1',
                                     subtitle: 'Phát âm',
                                   ),
                               const SizedBox(width: 20.0),
                               ActiveProjectsCard(
-                                cardColor: kSecondaryColor.withOpacity(0.65),
+                                cardColor: kColor.withOpacity(0.3),
                                 loadingPercent: 0.65,
                                 title: 'Bài 2',
                                 subtitle: 'Phân biệt chữ cái',

@@ -55,7 +55,7 @@ class _HomeScreen extends State<HomeScreen>{
     // debugPrint("12");
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: secondaryColor,
+      backgroundColor: kSecondaryColor,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(50.0),
           child: AppBar(
@@ -67,9 +67,8 @@ class _HomeScreen extends State<HomeScreen>{
       body: Stack(
         children: <Widget>[
           SingleChildScrollView(
-
             child: Container(
-              height: 785,
+              height: 780,
               child: AnimatedList(
                 key: _listkey,
                 initialItemCount: _data.length,
@@ -159,7 +158,7 @@ Widget buildItem(String item, Animation<double> animation, int index, BuildConte
   String t3 = "Cây rau";
   return SizeTransition(
     child: Padding(
-      padding: EdgeInsets.only(top: 10, right: 10, left: 10),
+      padding: EdgeInsets.only(top: 10, right: 15, left: 15),
       child: Container(
         alignment: mine ? Alignment.topLeft : Alignment.topRight,
         child: Bubble(
@@ -170,7 +169,7 @@ Widget buildItem(String item, Animation<double> animation, int index, BuildConte
               color: mine ? Colors.white : Colors.black,
             ),
           ),
-          color: mine ? Colors.blue : Colors.grey,
+          color: mine ? Colors.blue : Colors.white70,
           padding: BubbleEdges.all(10),
         ),
       ),

@@ -33,7 +33,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
-        backgroundColor: bgColor,
+        backgroundColor: kSecondaryColor,
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
@@ -91,12 +91,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   children: const [
                     Icon(
                       Icons.timer,
-                      color: Colors.grey,
+                      color: Colors.white60,
                     ),
                     Text(
                       " 35 phút",
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.white60,
                         fontWeight: FontWeight.w500,
                         fontSize: 16,
                       ),
@@ -163,7 +163,7 @@ class Description extends StatelessWidget {
       padding: EdgeInsets.only(top: 20.0),
       child: Text(
         "Bao gồm một số bài tập hỗ trợ luyện nghe và phát âm, giúp cho con có thể dễ dàng học từ mới một cách chính xác và tốt hơn. Bài học này được thiết kế để phù hợp với khả năng của con.",
-        style: TextStyle(color: Colors.white70),
+        style: TextStyle(color: Colors.white70, fontFamily: 'Poppins-Bold', fontSize: 30, fontWeight: FontWeight.w400),
       ),
     );
   }
@@ -191,7 +191,7 @@ class _CustomTabViewState extends State<CustomTabView> {
         padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width * .08, vertical: 15),
         decoration: BoxDecoration(
-          color: widget.index == index ? kPrimaryColor : null,
+          color: widget.index == index ? bgColor : null,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Text(
@@ -211,7 +211,7 @@ class _CustomTabViewState extends State<CustomTabView> {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: secondaryColor,
+        color: kColor.withOpacity(.3),
       ),
       child: Row(
         children: _tags

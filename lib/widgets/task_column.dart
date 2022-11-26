@@ -33,7 +33,7 @@ class TaskColumn extends StatelessWidget {
                 fontSize: 22.0,
                 fontWeight: FontWeight.w500,
                 fontFamily: 'Poppins-Bold',
-                color: Colors.white,
+                color: Colors.white70,
               ),
             ),
           ],

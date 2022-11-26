@@ -19,7 +19,7 @@ class _CourseScreenState extends State<CourseScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
-        backgroundColor: bgColor,
+        backgroundColor: kSecondaryColor,
         body: SafeArea(
           bottom: false,
           child: Padding(
@@ -39,7 +39,7 @@ class _CourseScreenState extends State<CourseScreen> {
                       Positioned(
                         left: 0,
                         child: CustomIconButton(
-                          child: const Icon(Icons.arrow_back,color: Colors.white70,),
+                          child: const Icon(Icons.arrow_back,color: Colors.white70),
                           height: 35,
                           width: 35,
                           onTap: () => Navigator.pop(context),
@@ -96,7 +96,7 @@ class CourseContainer extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(14),
-          color: secondaryColor,
+          color: kColor.withOpacity(0.3),
         ),
         padding: const EdgeInsets.all(10),
         child: Row(
@@ -124,7 +124,7 @@ class CourseContainer extends StatelessWidget {
                   LinearProgressIndicator(
                     value: course.completedPercentage,
                     backgroundColor: Colors.black12,
-                    color: kPrimaryColor,
+                    color: Colors.white60,
                   )
                 ],
               ),

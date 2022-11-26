@@ -46,17 +46,17 @@ class LessonCard extends StatelessWidget {
                   Text(
                     lesson.name,
                     style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
                       color: Colors.white70,
                     ),
                   ),
                   Text(
                     lesson.duration,
                     style: const TextStyle(
-                      fontSize: 13,
+                      fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey,
+                      color: Colors.white60,
                     ),
                   ),
                 ],

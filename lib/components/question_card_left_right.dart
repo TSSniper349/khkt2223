@@ -23,7 +23,7 @@ class QuestionCard2 extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: const EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: kColor.withOpacity(.3),
         borderRadius: BorderRadius.circular(25),
       ),
       child: Column(
@@ -32,7 +32,7 @@ class QuestionCard2 extends StatelessWidget {
             question.question,
             style: Theme.of(context)
                 .textTheme
-                .headline6
+                .headline5
                 ?.copyWith(color: Colors.white70),
           ),
           const SizedBox(height: kDefaultPadding/2),

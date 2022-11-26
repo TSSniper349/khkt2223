@@ -50,7 +50,7 @@ class _MyFilesState extends State<MyFiles> {
           children: [
             Text(
               "Tổng quan",
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(color: Colors.white),
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white70),
             ),
           ],
         ),
@@ -71,7 +71,7 @@ class _MyFilesState extends State<MyFiles> {
           children: [
             Text(
               "Kết quả chẩn đoán",
-              style: Theme.of(context).textTheme.subtitle1!.copyWith(color: Colors.white),
+              style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white70),
             ),
           ],
         ),

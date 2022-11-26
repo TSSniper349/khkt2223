@@ -4,6 +4,8 @@ import 'package:khkt2223/controllers/question_controller.dart';
 
 import '../constants.dart';
 
+int correctAns = 0;
+
 class Option extends StatelessWidget {
   const Option({
     Key? key,
@@ -24,7 +26,10 @@ class Option extends StatelessWidget {
             if (qnController.isAnswered) {
               if (index == qnController.selectedAns) {
                 return kGreenColor.withOpacity(.8);
-              } 
+              }
+              // if (index == qnController.correctAns) {
+              //   correctAns = correctAns + 1;
+              // }
               // else if (index == qnController.selectedAns &&
               //     qnController.selectedAns != qnController.correctAns) {
               //   return kRedColor;

@@ -16,7 +16,7 @@ class StorageDetails extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: kColor.withOpacity(.3),
         borderRadius: const BorderRadius.all(Radius.circular(14)),
       ),
       child: Column(
@@ -30,7 +30,7 @@ class StorageDetails extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .headline5!
-                      .copyWith(color: Colors.greenAccent),
+                      .copyWith(color: Colors.greenAccent,fontWeight: FontWeight.w500),
                 ),
                 Text(
                   "Có vẻ con không có hoặc có nguy cơ rất ít bị mắc hội chứng khó đọc. Những việc con cần làm là hãy cố gắng phát huy khả năng đọc hiểu của mình nhưng cũng không được chủ quan nhé!",
@@ -55,7 +55,7 @@ class StorageDetails extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .headline5!
-                      .copyWith(color: Colors.yellowAccent),
+                      .copyWith(color: Colors.yellowAccent, fontWeight: FontWeight.w500),
                 ),
                 Text(
                   "Con có khả năng bị mắc hội chứng khó đọc ở mức độ nhẹ. Con nên nói bố mẹ giao tiếp với con nhiều hơn để có thể giảm được tác động của bệnh lí về sau nhé!",
@@ -80,7 +80,7 @@ class StorageDetails extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .headline5!
-                      .copyWith(color: Colors.red),
+                      .copyWith(color: Colors.redAccent,fontWeight: FontWeight.w500),
                 ),
                 Text(
                   "Con có khả năng bị hội chứng khó đọc ở mức độ nặng. Bố mẹ nên đưa con tới gặp bác sĩ tâm lí để được kiểm tra kĩ hơn, từ đó có lộ trình điều trị hay được hỗ trợ một cách tốt nhất nhé!",

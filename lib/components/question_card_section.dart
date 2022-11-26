@@ -23,7 +23,7 @@ class QuestionCardSection extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: kColor.withOpacity(.3),
         borderRadius: BorderRadius.circular(25),
       ),
       child: Column(

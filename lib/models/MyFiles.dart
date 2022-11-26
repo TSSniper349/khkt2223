@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:khkt2223/screens/info_components/color.dart';
+
+import '../controllers/question_controller.dart';
 
 class CloudStorageInfo {
   final String? svgSrc, title, totalStorage;
-  final int? numOfFiles, percentage;
+  final int? numOfFiles, percentage, id;
   final Color? color;
+  //final QuestionController qnController = Get.put(QuestionController());
 
   CloudStorageInfo({
+    //this.qnController,
+    this.id,
     this.svgSrc,
     this.title,
     this.totalStorage,
@@ -16,8 +22,11 @@ class CloudStorageInfo {
   });
 }
 
+
+
 List demoMyFiles = [
   CloudStorageInfo(
+    id: 1,
     title: "Ghi nhớ",
     numOfFiles: 3,
     svgSrc: "assets/icons/Documents.svg",
@@ -26,6 +35,7 @@ List demoMyFiles = [
     percentage: 60,
   ),
   CloudStorageInfo(
+    id: 2,
     title: "Toán",
     numOfFiles: 3,
     svgSrc: "assets/icons/google_drive.svg",
@@ -34,6 +44,7 @@ List demoMyFiles = [
     percentage: 100,
   ),
   CloudStorageInfo(
+    id: 3,
     title: "Đọc",
     numOfFiles: 2,
     svgSrc: "assets/icons/one_drive.svg",
@@ -42,6 +53,7 @@ List demoMyFiles = [
     percentage: 40,
   ),
   CloudStorageInfo(
+    id: 4,
     title: "Khác",
     numOfFiles: 7,
     svgSrc: "assets/icons/drop_box.svg",

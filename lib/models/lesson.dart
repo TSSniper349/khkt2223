@@ -41,6 +41,6 @@ List<Lesson> lessonList = [
     isCompleted: true,
     isPlaying: false,
     name: "Cá",
-    fileName: "Cá.mp3",
+    fileName: "Cas.mp3",
   ),
 ];

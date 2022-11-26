@@ -45,6 +45,8 @@ class QuestionController extends GetxController
   int _numOfCorrectAns = 0;
   int get numOfCorrectAns => _numOfCorrectAns;
 
+  int gg = 0;
+
   // called immediately after the widget is allocated memory
   @override
   void onInit() {
@@ -79,7 +81,12 @@ class QuestionController extends GetxController
     _correctAns = question.answer;
     _selectedAns = selectedIndex;
 
-    if (_correctAns == _selectedAns) _numOfCorrectAns++;
+    if (_correctAns == _selectedAns) {
+      _numOfCorrectAns++;
+      if (question.id >=1 && question.id <= 10) {
+        gg++;
+      }
+    }
 
     // It will stop the counter
     _animationController.stop();

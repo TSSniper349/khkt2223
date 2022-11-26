@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
     // So that we have acccess our controller
     QuestionController _questionController = Get.put(QuestionController());
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: kSecondaryColor,
       body: Stack(
         children: [
           //SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
