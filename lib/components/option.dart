@@ -59,7 +59,7 @@ class Option extends StatelessWidget {
                     style: TextStyle(color: getTheRightColor(), fontSize: 16),
                   ),
                   Container(
-                    height: 50,
+                    height: 40,
                     width: 40,
                     decoration: BoxDecoration(
                       color: getTheRightColor() == kGrayColor

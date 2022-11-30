@@ -81,11 +81,17 @@ class QuestionController extends GetxController
     _correctAns = question.answer;
     _selectedAns = selectedIndex;
 
-    if (_correctAns == _selectedAns) {
-      _numOfCorrectAns++;
-      if (question.id >=1 && question.id <= 10) {
-        gg++;
-      }
+    // if (_correctAns == _selectedAns) {
+    //   _numOfCorrectAns++;
+    //   if (question.id >=1 && question.id <= 10) {
+    //     gg++;
+    //   }
+    // }
+    if (_selectedAns == 0) {
+      _numOfCorrectAns += 2;
+    }
+    else if (_numOfCorrectAns == 1) {
+      _numOfCorrectAns ++;
     }
 
     // It will stop the counter

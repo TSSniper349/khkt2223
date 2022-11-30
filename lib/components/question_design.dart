@@ -16,10 +16,10 @@ class QuestionDesign extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     QuestionController _questionController = Get.put(QuestionController());
-    if(index >= 0 && index<=2) return QuestionCard2(question: _questionController.questions[index]);
-    if (index >=3 && index<=5) return QuestionCard3(question: _questionController.questions[index]);
-    if (index >=6 && index<=8) return QuestionCardMath(question: _questionController.questions[index]);
-    if(index ==12) return QuestionCardSection(question: _questionController.questions[index]);
+    // if(index >= 0 && index<=2) return QuestionCard2(question: _questionController.questions[index]);
+    // if (index >=3 && index<=5) return QuestionCard3(question: _questionController.questions[index]);
+    // if (index >=6 && index<=8) return QuestionCardMath(question: _questionController.questions[index]);
+    // if(index ==12) return QuestionCardSection(question: _questionController.questions[index]);
     return QuestionCardNormal(question: _questionController.questions[index]);
     //question: _questionController.questions[index]
   }
