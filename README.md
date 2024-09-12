@@ -1,4 +1,4 @@
-#Technology and Innovation Fair 2023
+# Technology and Innovation Fair 2023
 
 An app for children with dyslexia. Detect, Improve and Track your progress.
 
