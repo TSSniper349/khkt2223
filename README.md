@@ -1,6 +1,6 @@
-# khkt2223
+#Technology and Innovation Fair 2023
 
-A new Flutter project.
+An app for children with dyslexia. Detect, Improve and Track your progress.
 
 ## Getting Started
 
